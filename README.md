@@ -1,6 +1,6 @@
 # php-respimg
 
-## a Frok from https://github.com/nwtn/php-respimg
+## a Fork from https://github.com/nwtn/php-respimg
 
 A responsive image workflow for optimizing and resizing your images.
 
