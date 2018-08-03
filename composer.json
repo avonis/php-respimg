@@ -23,7 +23,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/nwtn/php-respimg/"
+            "url": "https://github.com/avonis/php-respimg/"
         }
     ],
     "require": {
