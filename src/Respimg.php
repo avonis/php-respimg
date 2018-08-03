@@ -4,7 +4,7 @@
 	 * php-respimg <https://github.com/nwtn/php-respimg>
 	 */
 
-	namespace nwtn;
+	namespace avonis;
 
 	if (!class_exists('Client') || !class_exists('ServiceContainer')) {
 		if (file_exists(__DIR__ . '/../vendor/autoload.php')) {
