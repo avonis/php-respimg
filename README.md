@@ -1,5 +1,7 @@
 # php-respimg
 
+## a Frok from https://github.com/nwtn/php-respimg
+
 A responsive image workflow for optimizing and resizing your images.
 
 See also [grunt-respimg](https://www.npmjs.com/package/grunt-respimg).
@@ -23,7 +25,7 @@ Full documentation available at <https://rawgit.com/nwtn/php-respimg/master/docs
 To resize one raster image, without optimization:
 
 ```php
-$image = new nwtn\Respimg($input_filename);
+$image = new avonis\Respimg($input_filename);
 $image->smartResize($output_width, $output_height, false);
 $image->writeImage($output_filename);
 ```
@@ -31,7 +33,7 @@ $image->writeImage($output_filename);
 To resize one raster image and maintain aspect ratio, without optimization:
 
 ```php
-$image = new nwtn\Respimg($input_filename);
+$image = new avonis\Respimg($input_filename);
 $image->smartResize($output_width, 0, false);
 $image->writeImage($output_filename);
 ```
@@ -39,10 +41,10 @@ $image->writeImage($output_filename);
 To resize one raster image and maintain aspect ratio, with optimization:
 
 ```php
-$image = new nwtn\Respimg($input_filename);
+$image = new avonis\Respimg($input_filename);
 $image->smartResize($output_width, 0, true);
 $image->writeImage($output_filename);
-nwtn\Respimg::optimize($output_filename, 0, 1, 1, 1);
+avonis\Respimg::optimize($output_filename, 0, 1, 1, 1);
 ```
 
 To resize a directory of raster images and maintain aspect ratio, with optimization:
@@ -54,13 +56,13 @@ if ($dir = opendir($input_path)) {
 		$base = pathinfo($file, PATHINFO_BASENAME);
 		$ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
 		if (in_array($ext, $exts)) {
-			$image = new nwtn\Respimg($input_path . '/' . $file);
+			$image = new avonis\Respimg($input_path . '/' . $file);
 			$image->smartResize($width, 0, true);
 			$image->writeImage($output_path . '/' . $base . '-w' . $w . '.' . $ext);
 		}
 	}
 }
-nwtn\Respimg::optimize($output_path, 0, 1, 1, 1);
+avonis\Respimg::optimize($output_path, 0, 1, 1, 1);
 ```
 
 To resize a directory of raster images and SVGs and maintain aspect ratio, with optimization:
@@ -72,16 +74,16 @@ if ($dir = opendir($input_path)) {
 		$base = pathinfo($file, PATHINFO_BASENAME);
 		$ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
 		if (in_array($ext, $exts)) {
-			$image = new nwtn\Respimg($input_path . '/' . $file);
+			$image = new avonis\Respimg($input_path . '/' . $file);
 			$image->smartResize($width, 0, true);
 			$image->writeImage($output_path . '/' . $base . '-w' . $w . '.' . $ext);
 		} elseif ($ext === 'svg') {
 			copy($input_path . '/' . $file, $output_path . '/' . $file);
-			nwtn\Respimg::rasterize($input_path . '/' . $file, $output_path . '/', $width, 0);
+			avonis\Respimg::rasterize($input_path . '/' . $file, $output_path . '/', $width, 0);
 		}
 	}
 }
-nwtn\Respimg::optimize($output_path, 3, 1, 1, 1);
+avonis\Respimg::optimize($output_path, 3, 1, 1, 1);
 ```
 
 ## Release History
