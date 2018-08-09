@@ -1,7 +1,7 @@
 {
     "name": "avonis/php-respimg",
     "description": "A responsive image workflow for optimizing and resizing your images",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "keywords": [
         "responsive images",
         "respimg",
