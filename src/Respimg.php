@@ -379,12 +379,6 @@
 			// turn off interlacing
 			$this->setInterlaceScheme(\Imagick::INTERLACE_NO);
 
-			// Strip all profiles except color profiles.
-			foreach ($this->getImageProfiles('*', true) as $key => $value) {
-				if ($key != 'icc' && $key != 'icm') {
-					$this->removeImageProfile($key);
-				}
-			}
 
 			if (method_exists($this, 'deleteImageProperty')) {
 				$this->deleteImageProperty('comment');
