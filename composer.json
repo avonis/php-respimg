@@ -14,7 +14,7 @@
     ],
     "require": {
         "php": ">=5.3.0",
-        "gumlet/php-image-resize": "dev-master"
+        "gumlet/php-image-resize": "1.9.*"
     },
     "config": {
         "bin-dir": "bin"
