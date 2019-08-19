@@ -1,7 +1,7 @@
 {
     "name": "avonis/php-respimg",
     "description": "A responsive image workflow for optimizing and resizing your images",
-    "version": "2.0.0",
+    "version": "2.0.1",
 
     "homepage": "https://github.com/avonis/php-respimg/",
     "license": "MIT",
